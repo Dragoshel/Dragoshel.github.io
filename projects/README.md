@@ -1,5 +1,3 @@
-# A steganographic approach to sending messages
-
 ## Story
   Tell a story
 ## Table of contents
