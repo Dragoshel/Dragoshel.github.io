@@ -1,13 +1,14 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of contents
 	
-	* [Story](#story)
-	* [Introduction](#introduction)
-	* [Explanation](#explanation)
-		* [Explanation of the command](#explanation-of-the-command)
-	* [Conclusion](#conclusion)
-	* [Future Work](#future-work)
-	* [References](#references)
+* [Story](#story)
+* [Introduction](#introduction)
+* [Explanation](#explanation)
+  * [Explanation of the command](#explanation-of-the-command)
+  * [Implementation](#implementation)
+* [Conclusion](#conclusion)
+* [Future Work](#future-work)
+* [References](#references)
 
 <!-- STORY -->
 ## Story
@@ -20,11 +21,11 @@
 Today you don't have to worry too much about the methods of concealing a message... Goner are the days when you had to ponder over the great selection of invisible inks to hide your secret affairs. You no longer have to worry about the safety of your servant when shaving its head with razor blades in order to write a message on his scalp, so that no one will bother to check once the hair grows back.
 
 "So how would I do it today? I don't want to be held back from this awesome activity because of some outdated tools. I want to get my thoughts across without anyone getting the better of me" — you may impatiently say. As for most questions in life, computers are the  answer. More specifically, encoding a digital message into another digital file using a bit of ingenuity, tricks and algorithms. Getting the message out will be as simple as reversing the hiding action, removing the hassle and inconvenience in the process. Thus, we gather a lot of advantages from digital encoding:
-	* Very hard to decode if one doesn't know the method of hiding.
-	* Reliable, as the encoded file is persistent and doesn't change with time.
-	* No limitations. It's entirely possible that the message may very well be an image, a document, or anything other than plain text. Picture this... hiding an image inside another image :)
-	* It profoundly reduces noticeable alterations to the original image, in contrast to physical steganography where the paper encoded presents visible damage or irregularities.
-	* It's easy!
+* Very hard to decode if one doesn't know the method of hiding.
+* Reliable, as the encoded file is persistent and doesn't change with time.
+* No limitations. It's entirely possible that the message may very well be an image, a document, or anything other than plain text. Picture this... hiding an image inside another image :)
+* It profoundly reduces noticeable alterations to the original image, in contrast to physical steganography where the paper encoded presents visible damage or irregularities.
+* It's easy!
 
 Clearly, there's an overwhelming superiority of digital steganography over traditional means. With so many advantages backing it up, it's only logical that people will want to use it. There's already a handful of tools out there capable of superbly hiding anything into images, implementing all the advantages mentioned above (Some tools are: "steghide", "jsteg" or "Hide'N'Steg"). This means that anyone with a home computer can get on board with hiding texts, and those programs will greatly imporve the experience of doing so. 
 
@@ -45,11 +46,11 @@ Fire up the terminal, and let's embed the text file right inside that cat.jpeg.
 
 <!-- EXPLANATION OF THE COMMAND -->
 ### Explanation of the command
-	* steghide is the name of the compiled binary we're going to use.
-	* embed is the first option that steghide needs to get as input when you want to hide files.
-	* the well known -v flag for verbose output gives extra information on what is hapenning behind the hood.
-	* the -cf is for "cover file" and the next argument will specify the path of the file you want to embed into. In this context, "cover file" is just a fancy term for my cat image.
-	* the -ef flag stands for "embed file" and lets you pass the path of the file you want to hide, and in this case it's going to be my witcher quote.
+* steghide is the name of the compiled binary we're going to use.
+* embed is the first option that steghide needs to get as input when you want to hide files.
+* the well known -v flag for verbose output gives extra information on what is hapenning behind the hood.
+* the -cf is for "cover file" and the next argument will specify the path of the file you want to embed into. In this context, "cover file" is just a fancy term for my cat image.
+* the -ef flag stands for "embed file" and lets you pass the path of the file you want to hide, and in this case it's going to be my witcher quote.
 
 Executing this command will begin the process of embedding the data, and if everything runs smoothly, you should get an output like this:
 
