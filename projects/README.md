@@ -5,14 +5,17 @@
 * [Introduction](#introduction)
 * [Explanation](#explanation)
   * [Explanation of the command](#explanation-of-the-command)
-  * [Implementation](#implementation)
+  * [The limitations](#the-limitations)
+  * [How it all works](#how-it-all-works)
+* [Implementation](#implementation)
 * [Conclusion](#conclusion)
 * [Future Work](#future-work)
 * [References](#references)
 
 <!-- STORY -->
 ## Story
-  Tell a story
+
+Tell a story
   Jeremiah Dedon and the secret blinking morse code.
 
 <!-- INTRODUCTION -->
@@ -34,7 +37,7 @@ Alright, now you're interested in the subtle arts of hiding things in plain sigh
 <!-- EXPLANATION -->
 ## Explanation
 
-Without wasting anymore time, let's jump straight into what makes computer steganography such an amazing field to work in. Grab your linux distro and terminal of choice, and install "steghide" (a tool of my choice) and let's hide some messages! Here I have a text file containing one of the most popular quotes of Geralt from "The Witcher" books, and right beside it, a picture of a cat.
+Without wasting anymore time, let's jump straight into what makes computer steganography such an amazing field to work in. Grab your linux distro and terminal of your choice, install "steghide", (a tool of my choice) and let's hide some messages! Here I have a text file containing one of the most popular quotes of Geralt from "The Witcher" books, and right beside it, a picture of a cat.
 
 	[Geralt quote text]					[Picture of a cat]
 
@@ -62,7 +65,15 @@ Now take a look at the modified image! It's so cool, it's marvelous, it's... it'
 
 <!-- THE LIMITATIONS -->
 ### The limitations
-Probably as you've noticed, steganography likes very much to play with human perception and our inability of distinguishing small changes on large scales. I can only describe it as being a very precise tool that deals with imprecision. However, if you push it too hard it might break on you, as it is with any fine and precise tool. For instance, passing a file too big for embedding will result in an error as there is so much space you can use in an image or audio file. Moreover, there's only a handful of file formats that can be used as cover files. Think about it, it wouldn't make sense to change the inner workings of a text message, it's gonna result in something incoherent because the txt file is too precise in what it has to offer.
+Probably as you've noticed, steganography likes very much to play with human perception and our inability of distinguishing small changes on large scales. I can only describe it as being a very precise tool that deals with imprecision. However, if you push it too hard it might break on you, as it is with any fine and precise tool. For instance, passing a file too big for embedding will result in an error as there is so much space you can use in an image or audio file. Moreover, there's only a handful of file formats that can be used as cover files. Think about it, it wouldn't make sense to change the inner workings of a text message, it's gonna result in something incoherent because the txt file is too precise in what it has to offer. Let me explain in more detail:
+
+<!-- HOW IT ALL WORKS -->
+### How it all works
+As we all know, our computer files are all made from a very long sequence of bytes, which represent contiguous blocks of memory on our storage devices. However, the way we interpret those bytes is very important... We can choose to look at a file as an image, text document, e-book or a game. I don't care that the sequence of bytes 01100011 01100001 01110100 spells out "cat" in ascii, all I can really see is this strange grey-purple. That's right! I chose to interpret the bytes as a pixel made out of R(ed)G(reen)(B)lue values (I came to understand that computer science is just a big and extensive collection of standards, and this example shows why they're so important). Realising this holds the key to our understanding of steganography — So here's a plan of attack: Break down the file into it's elementary components and fit them into your cover file, make sure it can't be noticed, keep the image file as it, and don't increase the size and don't just paste the characters at the end. It's afterwards mandatory that you can extract the file as it was before this process took place. Luckily, you don't have to find ways of resolving all of those problems and you can adapt what other very smart poeple developed. Least Significant Bit, LSB in short, refers to the first bit that has the lowest importance in large scale operations. For example, the first bit of the number 100 is zero, whereas for 101 is one, so changing the last bit had only a significance in changing the number's parity. On the other hand, if I change the most significant bit of 100 (which happends to be also zero), all of the sudden from 100 we skyrocket all the way to 228. The same goes for colors as well: 252, 3, 144 in RGB is a beautiful and warm pink. If I change the last bit into one so that the green value turns from 3 to 131, the color will change significantly.
+
+The big revelation is that changing the LSB from any of the pixel's color values will inperceptevly change the color and thus, doing so to every byte of information will result in a copy of the image with vast amounts differences. The new file is by all means identically to the original and completely changed at the same time.
+
+How does this help us? Well, those changed bits could be tiny segments of our message we so dearly want to encode! Breaking up our message into small bits and sticking them at the end of each pixel until we run out of data to encode will do the trick. This method not only superbly hides all of our data without increasing the size of the cover file, but also keeps the integrity of the original intact. Afterwards, we can reconstruct our message by reversing the process and get the ending bite of every pixel,  sequentially sticking them one next to eachother until we get the original message back in full glory.
 
 <!-- IMPLEMENTATION -->
 ## Implementation
