@@ -39,7 +39,14 @@ Alright, now you're interested in the subtle arts of hiding things in plain sigh
 
 Without wasting anymore time, let's jump straight into what makes computer steganography such an amazing field to work in. Grab your linux distro and terminal of your choice, install "steghide", (a tool of my choice) and let's hide some messages! Here I have a text file containing one of the most popular quotes of Geralt from "The Witcher" books, and right beside it, a picture of a cat.
 
-	[Geralt quote text]					[Picture of a cat]
+ <div class="row">
+  <div class="column">
+    <img src="Quote.jpg" alt="Quote" width="50%" height="50%">
+  </div>
+  <div class="column">
+    <img src= "Cat.jpg" alt="Cat" width="40%" height="50%">
+  </div>
+</div> 
 
 Fire up the terminal, and let's embed the text file right inside that cat.jpeg.
 
