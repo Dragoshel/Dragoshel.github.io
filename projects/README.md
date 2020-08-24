@@ -15,8 +15,16 @@
 <!-- STORY -->
 ## Story
 
-Tell a story
-  Jeremiah Dedon and the secret blinking morse code.
+You never thought that the germans were the cleverest of creatures, but yet they managed to capture your entire squad. They were definitely outnumbered two to one, but were so fast that you didn't even get the chance the draw out your pistol. War ended prematurely for you and your mates that day, turning a moment of relief in that abandoned shack, to a sudden dissapointment...
+
+- "Sebastian! Did they grab you the smokes? I could go for one right now."
+
+- "They fuckin' took them. You know the Nazis love Turret, even though they'll never admit to it. All a bunch of pigs! Who in the hell takes someones smokes... even in war."
+
+- "Doesn't matter now, let's write the messages. I want to mediatate before my death."
+
+You took a look at your jurnal, the only thing that they let you keep. The last entry dated '42.
+
 
 <!-- INTRODUCTION -->
 ## Introuction
