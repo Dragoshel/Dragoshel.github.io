@@ -17,14 +17,25 @@
 
 You never thought that the germans were the cleverest of creatures, but yet they managed to capture your entire squad. They were definitely outnumbered two to one, but were so fast that you didn't even get the chance the draw out your pistol. War ended prematurely for you and your mates that day, turning a moment of relief in that abandoned shack, to a sudden dissapointment...
 
-- "Sebastian! Did they grab you the smokes? I could go for one right now."
+"Sebastian! Do you still have the cigarettes? I could go for one right now."
 
-- "They fuckin' took them. You know the Nazis love Turret, even though they'll never admit to it. All a bunch of pigs! Who in the hell takes someones smokes... even in war."
+"They fuckin' took them. You know the nazis love Turret, even though they'll never admit to it. All a bunch of pigs! Who in the hell takes someones smokes... even in war."
 
-- "Doesn't matter now, let's write the messages. I want to mediatate before my death."
+"Doesn't matter now, let's write the messages; I want to mediatate before my death."
 
-You took a look at your jurnal, the only thing that they let you keep. The last entry dated '42.
+You opened your jurnal, the only thing that they let you keep; the last entry dated October '42. You begin to buisily rip off some of the paper that was left, and hand one to each of your camarads.
 
+"Boys, I hope you love your lads back home cause they're gonna' get us out of here in no time!"
+
+"Do you really think we'll get any bloody attention? With the enigma code broken..." 
+
+Right before Jeff could finish his sentence, he got a swift punch in the ribs from somewhere in the dark. He immeadiatley understood that they were being watched.
+
+Now he wispered, not only because he was afraid their plan might be deconspired, but also the notion of getting punched in the liver again wasn't the most brilliant idea: "... with enigma cracked, everyone is buisy figuring out secret italian plans."
+
+"And would you rather wait for your death at the hand of someone who takes away your ciggies? I thought not. Now write something to your aunt Dorothy!"
+
+The men all began scribing pompous letters to their families in unity. Or so were they? Hiding a secret message through the lines were their actual goal. Indeed, they have learned this while in the army, and even though it was a seemenlgy innocent and not very useful ability, it was what it actually saved them, for their allies intercepted the letters and understood the method of hiding messages in oridnary documents.
 
 <!-- INTRODUCTION -->
 ## Introuction
