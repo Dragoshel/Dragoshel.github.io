@@ -15,22 +15,47 @@
 <!-- STORY -->
 ## Story
 
-Tell a story
-  Jeremiah Dedon and the secret blinking morse code.
+You never thought that the Germans were the cleverest of creatures, but yet they managed to capture your entire squad. They were only a bunch of teenagers, outnumbered two to one, but were so fast that you didn't even get the chance the draw out your pistol. War ended prematurely for you and your mates that day, turning a moment of relief in that abandoned shack, to a sudden dissapointment.
+
+"Sebastian! Do you still have the cigarettes? I could go for one right now."
+
+"They fuckin' took them. You know the Nazis love Turret, even though they'll never admit to it. All a bunch of pigs! Who in the hell takes someones smokes... even in war."
+
+"Doesn't matter now, let's write the messages; I want to mediatate before my death."
+
+You opened your jurnal, the only thing that they let you keep; the last entry dated October '42. You begin to buisily rip off some of the paper that was left, and hand one to each of your comrades.
+
+"Boys, I hope your mama and papa really really love you, because they're the only ones who can get us out of this mess."
+
+Everyone nodded in unity; the air of mystery could be almost felt from inside of the prison walls. No, it was clearly not the lads back home who were going to get you out of there; how could they?
+
+"Do you really think we'll get any bloody attention? With the enigma code brok-..." 
+
+Right before Jeff could finish his sentence, he got a swift punch in the ribs from somewhere in the dark. He immeadiatley understood that they were being watched by the guards.
+
+Now he whispered, not only because he was afraid their plan might be exposed, but also the notion of getting punched in the liver again by one of his cellmate wasn't the most brilliant of ideas: "... with enigma cracked, everyone is busy figuring out secret German plans."
+
+"And how in the hell does a rookie like you hear such news?"
+
+"That's the crazy part, it's not news anymore! I've heard the general talking a while back; you know, those kinds of things tend to get out. I thought everyone got on to it pretty quickly." The tone of satisfaction could be heard from Jeff's voice, as he was never the one to gather this much attention before.
+
+"I'm not contesting it. It's just that I don't wanna sit around while I'm being eaten alive by rats and mold. Now write something to your aunt Dorothy!"
+
+The men all began scribing pompous letters to their families, or so they made you think. Hiding a secret message through the lines was their actual goal. Indeed, they have learned this while in the army training, and even though it was a seemingly innocent and not very useful ability, it was what it actually saved them, for their allies intercepted the letters and understood the method of hiding messages in ordinary documents.
 
 <!-- INTRODUCTION -->
-## Introuction
+## Introduction
 
-Today you don't have to worry too much about the methods of concealing a message... Goner are the days when you had to ponder over the great selection of invisible inks to hide your secret affairs. You no longer have to worry about the safety of your servant when shaving its head with razor blades in order to write a message on his scalp, so that no one will bother to check once the hair grows back.
+Today you don't have to worry too much about the methods of concealing a message. Goner are the days when you had to ponder over the great selection of invisible inks to hide your secret affairs. You no longer have to worry about the safety of your servant when shaving its head with razor blades in order to write a message on his scalp, so that no one will bother to check once the hair grows back. And you definitely don have to make a letter to your aunt Dorothy appear believable.
 
-"So how would I do it today? I don't want to be held back from this awesome activity because of some outdated tools. I want to get my thoughts across without anyone getting the better of me" — you may impatiently say. As for most questions in life, computers are the  answer. More specifically, encoding a digital message into another digital file using algortihms, some tricks and a bit of ingenuity. Getting the message out will be as simple as reversing the hiding action, removing the hassle and inconvenience in the practice. Therefore, we gather a lot of advantages from digital encoding:
+"So how would I do it today? I don't want to be held back from this awesome activity because of some outdated tools. I want to get my thoughts across without anyone getting the better of me" — you may impatiently say. As for most questions in life, computers are the  answer. More specifically, encoding a digital message into another digital file using algorithms, some tricks and a bit of ingenuity. Getting the message out will be as simple as reversing the hiding action, removing the hassle and inconvenience in the practice. Therefore, we gather a lot of advantages from digital encoding:
 * Very hard to decode if one doesn't know the method of hiding.
 * Reliable, as the encoded file is persistent and doesn't change with time.
 * No limitations. It's entirely possible that the message may very well be an image, a document, or anything other than plain text. Picture this... hiding an image inside another image :)
 * It profoundly reduces noticeable alterations to the original image, in contrast to physical steganography where the paper encoded presents visible damage or irregularities.
 * It's easy!
 
-Clearly, there's an overwhelming superiority of digital steganography over traditional means. With so many advantages backing it up, it's only logical that people will want to use it. There's already a handful of tools out there superbly capable of hiding anything into images, implementing all the advantages mentioned above (Some tools are: "steghide", "jsteg" or "Hide'N'Steg"). This means that anyone with a home computer can get on board with hiding texts, and those programs will greatly imporve the experience of doing so. 
+Clearly, there's an overwhelming superiority of digital steganography over traditional means. With so many advantages backing it up, it's only logical that people will want to use it. There's already a handful of tools out there superbly capable of hiding anything into images, implementing all the advantages mentioned above (Some tools are: "steghide", "jsteg" or "Hide'N'Steg"). This means that anyone with a home computer can get on board with hiding texts, and those programs will greatly improve the experience of doing so. 
 
 Alright, now you're interested in the subtle arts of hiding things in plain sight and want to learn more about it... How do you use it? What are the possibilities and what are the downsides? How is such a seemingly complex process achieved? I will begin addressing all of those questions and give a top-down explanation of how this system works, as well as how it can be implemented using computer code.
 
@@ -51,34 +76,34 @@ Without wasting anymore time, let's jump straight into what makes computer stega
 Fire up the terminal, and let's embed the text file right inside that Cat.jpeg:
 
 ```bash
-	steghide embed -v -cf 'Cat.jpg' -ef 'quote.txt' -p 'Dieffenbachia'
+steghide embed -v -cf 'Cat.jpg' -ef 'quote.txt' -p 'Dieffenbachia'
 ```
 <!-- EXPLANATION OF THE COMMAND -->
 ### Explanation of the command
 * steghide is the name of the compiled binary we're going to use.
 * embed is the first option that steghide needs to get as input when you want to hide files.
-* the well known -v flag for verbose output gives extra information on what is hapenning behind the hood.
+* the well-known -v flag for verbose output gives extra information on what is hapenning behind the hood.
 * the -cf is for "cover file" and the next argument will specify the path of the file you want to embed into. In this context, "cover file" is just a fancy term for my cat image.
 * the -ef flag stands for "embed file" and lets you pass the path of the file you want to hide, and in this case it's going to be my witcher quote.
-* finally, you have to provide a password so that only you can access the contents. Alternatively, you can omit this flag and set it at the password promt from standard input.
+* finally, you have to provide a password so that only you can access the contents. Alternatively, you can omit this flag and set it at the password prompt from standard input.
 
 Executing this command will begin the process of embedding the data, and if everything runs smoothly, you should get an output like this:
 
 ```bash
-	reading secret file "quote.txt"... done
-	reading cover file "Cat.jpg"... done
-	creating the graph... 229 sample values, 1469 vertices, 791725 edges
-	executing Static Minimum Degree Construction Heuristic... 99,9% (1,0) done
+reading secret file "quote.txt"... done
+reading cover file "Cat.jpg"... done
+creating the graph... 229 sample values, 1469 vertices, 791725 edges
+executing Static Minimum Degree Construction Heuristic... 99,9% (1,0) done
 ```
 
 Steghide will hide the data directly inside of that image, so be sure you'll have a backup just in case, because you're not getting your original file back.
 
 Now take a look at the modified image! It's so cool, it's marvelous, it's... it's the same image. Remember when I told you the file remains more or less the same and there's no way of telling with the naked eye that there's something hidden inside? — That's exactly the point. The integrity of the original file must approximatively remain the same for the steganographic process to be successful. Now, there is not to say that there will be someone ceasing you from cramming in so much data that you completely eradicate even the slightest trace of a cat in that image; it will also be quite obvious that you've hidden something secret when your feline buddy looks like the noise of an old cathode tube TV. Additionally, you can hide your texts in audio files which is another format that doesn't require precision in order to be understood by us.
 
-Extracting the contents of the embeded file is as easy as the first command:
+Extracting the contents of the embedded file is as easy as the first command:
 
 ```bash
-	steghide extract -v -sf 'Cat.jpg' -xf 'My_secret_msg.txt' -p 'Dieffenbachia'
+steghide extract -v -sf 'Cat.jpg' -xf 'My_secret_msg.txt' -p 'Dieffenbachia'
 ```
 
 * -sf stands for "stegofile" and it's pretty self explanatory. Give it a file that has been edited by steghide before.
