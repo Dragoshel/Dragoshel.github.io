@@ -66,7 +66,7 @@ Without wasting anymore time, let's jump straight into what makes computer stega
 
  <div class="row">
   <div class="column">
-    <img src="images/Quote.jpg" alt="Quote" width="50%" height="50%">
+    <img src="images/Quote.jpg" alt="Quote" width="40%" height="50%">
   </div>
   <div class="column">
     <img src= "images/Cat.jpg" alt="Cat" width="35%" height="50%">
@@ -116,7 +116,10 @@ Perhaps you have noticed, steganography very much likes to play with human perce
 
 <!-- HOW IT ALL WORKS -->
 ### How it all works
-As we all know, our computer files are all made from a very long sequence of bytes, which represent contiguous blocks of memory on our storage devices. However, the way we interpret those bytes is very important... We can choose to look at a file as an image, text document, e-book or a game. I don't care that the sequence of bytes 01100011 01100001 01110100 spells out "cat" in ascii;  all I can really see is this strange grey-purple. That's right! I chose to interpret the bytes as a pixel made out of R(ed)G(reen)(B)lue values (I came to understand that computer science is just a big and extensive collection of standards, and this example shows why they're so important). Realising this holds the key to our understanding of steganography.
+As we all know, our computer files are all made from a very long sequence of bytes, which represent contiguous blocks of memory on our storage devices. However, the way we interpret those bytes is very important... We can choose to look at a file as an image, text document, e-book or a game. I don't care that the sequence of bytes 01100011 01100001 01110100 spells out "cat" in ascii;  all I can really see is this strange grey-purple.
+<img src="images/Color_explained.png" alt="Color_explained" width="50%" height="50%">
+
+That's right! I chose to interpret the bytes as a pixel made out of R(ed)G(reen)(B)lue values (I came to understand that computer science is just a big and extensive collection of standards, and this example shows why they're so important). Realising this holds the key to our understanding of steganography.
 
 So here's a plan of attack: Break down the file into its elementary components and fit them into your cover file, make sure it can't be noticed, keep the image file as it, and don't increase the size and don't just paste the characters at the end. It's afterwards mandatory that you can extract the file as it was before this process took place. Luckily, you don't have to find ways of resolving all of those problems and you can adapt what other very smart people developed. Least Significant Bit, LSB in short, refers to the first bit that has the lowest importance in large-scale operations. For example, the first bit of the number 100 is zero, whereas for 101 is one, so changing the last bit had only a significance in changing the number's parity. On the other hand, if I change the most significant bit of 100 (which also happens to be zero), all of the sudden, from 100 we skyrocket all the way to 228. The same goes for colors as well: (252, 3, 144) in RGB is a beautiful and warm pink. If I change the last bit into one so that the green value turns from 3 to 131, the color will change significantly.
 
@@ -124,7 +127,7 @@ The big revelation is that changing the LSB from any of the pixel's color values
 
 How does this help us? Well, those changed bits could be tiny segments of our message we so dearly want to encode! Breaking up our message into small bits and sticking them at the end of each pixel until we run out of data to encode will do the trick. This method not only superbly hides all of our data without increasing the size of the cover file, but also keeps the integrity of the original intact. Afterwards, we can reconstruct our message by reversing the process and get the ending bite of every pixel, sequentially sticking them one next to each other until we get the original message back in its full glory.
 
-	[Picture showing the process]
+<img src="images/Cat_explained.jpg" alt="Cat_explained" width="50%" height="50%">
 
 <!-- IMPLEMENTATION -->
 ## Implementation
