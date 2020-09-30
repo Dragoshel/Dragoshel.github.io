@@ -18,7 +18,6 @@ body {
     padding: 0;
     background-color: #FEFFFF;
     color: black;
-    letter-spacing: 0.5px;
 }
 
 div.heading {
@@ -59,7 +58,7 @@ div.heading {
 .navbar {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    height: 5vh;
+    height: 4rem;
     width: 100%;
     background-color: #17252A;
     font-family: "Open Sans";
@@ -75,6 +74,10 @@ div.heading {
     margin: 0%;
 }
 
+.navbar-nav :hover {
+    height: 6rem;
+}
+
 .nav-link {
     display: flex;
     color: white;
@@ -86,7 +89,7 @@ div.heading {
 
 main {
     font-family: 'Open sans', sans-serif, monospace;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--dark);
 }
 
@@ -102,4 +105,28 @@ main {
     font-family: 'LemonMilk', sans-serif, monospace;
     font-size: 1.25rem;
     color:#ef2929;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.code {
+    background-color: #f6f8fa;
+    font-size: 85%;
+    border-radius: 6px;
+    padding-left: 2rem;
+    height: 120%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.arg {
+    color: #24292e;
+}
+
+.command {
+    color: #d73a49;
+}
+
+.flag {
+    color: #005cc5;
 }

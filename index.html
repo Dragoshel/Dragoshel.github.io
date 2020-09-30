@@ -199,6 +199,33 @@
             <p>
                 Fire up the terminal, and let's embed the text file right inside that Cat.jpeg:
             </p>
+            <div class="code">
+                <span class="command">
+                    steghide
+                </span>
+                <span class="arg">
+                    embed
+                </span>
+                <span class="flag">
+                    -v -cf
+                </span>
+                <span class="arg">
+                    Cat.jpg
+                </span>
+                <span class="flag">
+                    -ef
+                </span>
+                <span class="arg">
+                    Quote.txt
+                </span>
+                <span class="flag">
+                    -p
+                </span>
+                <span class="arg">
+                    'myPassword'
+                </span>
+            </div>
+            <br>
             <h3>Explanation of the command</h3>
             <p>
             <ul>
@@ -226,7 +253,7 @@
                 <li>
                     Finally, you have to provide a password so that only you can access the contents. Alternatively, you
                     can
-                    omit this flag and set it at the password prompt from standard input.
+                    omit the -p flag and set it at the password prompt from standard input.
                 </li>
             </ul>
             </p>
@@ -235,11 +262,23 @@
                 you
                 should get an output like this:
             </p>
-            <p>
-                reading secret file "quote.txt"... done
-                reading cover file "Cat.jpg"... done
-                creating the graph... 229 sample values, 1469 vertices, 791725 edges
-                executing Static Minimum Degree Construction Heuristic... 99,9% (1,0) done
+            <div class="code">
+                <span class="arg">
+                    reading secret file "quote.txt"... done
+                </span>
+                <br>
+                <span class="arg">
+                    reading cover file "Cat.jpg"... done
+                </span>
+                <br>
+                <span class="arg">
+                    creating the graph... 229 sample values, 1469 vertices, 791725 edges
+                </span>
+                <br>
+                <span class="arg">
+                    executing Static Minimum Degree Construction Heuristic... 99,9% (1,0) done
+                </span>
+            </div>
             </p>
             <p>
                 Steghide will hide the data directly inside of that image, so be sure you'll have a backup just in case,
@@ -262,9 +301,29 @@
                 in audio files which is another format that doesn't require precision in order to be understood by us.
 
                 Extracting the contents of the embedded file is as easy as the first command:
-
-                steghide extract -v -sf 'Cat.jpg' -xf 'My_secret_msg.txt' -p 'Dieffenbachia'
             </p>
+            <div class="code">
+                <span class="command">
+                    steghide extract
+                    <span class="flag">
+                        -v -sf
+                    </span>
+                    <span class="arg">
+                        'Cat.jpg'
+                    </span>
+                    <span class="flag">
+                        -xf
+                    </span>
+                    <span class="arg">
+                        'My_secret_msg.txt'
+                    </span>
+                    <span class="flag">
+                        -p
+                    </span>
+                    <span class="arg">
+                        'Dieffenbachia'
+                    </span>
+            </div>
             <ul>
                 <li>
                     -sf stands for "stegofile" and it's pretty self explanatory. Give it a file that has been edited by
