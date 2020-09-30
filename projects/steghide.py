@@ -17,8 +17,6 @@ def reveal(image_data, pixel_index, color_index, char, bit_index):
 	char[0] |= byte << bit_index
 
 def encode(image_path, message):
-	image = None
-	
 	try:
 		image = Image.open(image_path, 'r')
 	except FileNotFoundError:
@@ -79,6 +77,7 @@ def decode(image_path):
 		char[0] &= 0
 
 	return decoded_msg
+
 if __name__ == '__main__':
 	option = sys.argv[1]
 

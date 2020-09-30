@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "LemonMilk";
+    src: url("./fonts/LemonMilkLight-owxMq.otf");
+}
+
+:root {
+    font-size: 16px;
+    --dark: #222629;
+    --medium: #474B4f;
+    --light: #6B6E70;
+
+    --apple: #86C232;
+    --swamp: #61892F;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FEFFFF;
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+div.heading {
+    background-color: #17252A;
+    height: 6rem;
+}
+
+.logo {
+    font-family: "LemonMilk";
+    font-size: 26px;
+    text-align: left;
+    vertical-align: middle;
+    padding: 1.75rem;
+    color: white;
+}
+
+.logo_root {
+    color: #ef2929;
+    font-family: "Open Sans", monospace, sans-serif;
+}
+.logo_shell {
+    color: #ef2929;
+}
+.logo_shell_tilde {
+    color: #729ece; 
+}
+#autotype {
+    font-family: "Open Sans";
+}
+
+.project {
+    background-color: white;
+    text-align: justify;
+    text-justify: auto;
+    margin: 8rem;
+}
+
+.navbar {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 5vh;
+    width: 100%;
+    background-color: #17252A;
+    font-family: "Open Sans";
+    margin-bottom: 3rem;
+}
+
+.navbar-nav {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    float: right;
+    padding-right: 3rem;
+    margin: 0%;
+}
+
+.nav-link {
+    display: flex;
+    color: white;
+}
+
+.navbar-nav li{
+    padding: 14px 16px;
+}
+
+main {
+    font-family: 'Open sans', sans-serif, monospace;
+    font-size: 18px;
+    color: var(--dark);
+}
+
+.text {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    column-count: 2;
+    column-width: 100px;
+}
+
+.text h3 {
+    font-family: 'LemonMilk', sans-serif, monospace;
+    font-size: 1.25rem;
+    color:#ef2929;
+}
