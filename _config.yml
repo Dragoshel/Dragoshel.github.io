@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 title: Dragos Ionescu
 description: This is my site... Welcome, everyone!
+destination: ./index.html
