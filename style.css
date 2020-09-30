@@ -52,35 +52,37 @@ div.heading {
     background-color: white;
     text-align: justify;
     text-justify: auto;
-    margin: 8rem;
+    margin: 7rem;
 }
 
 .navbar {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    height: 4rem;
-    width: 100%;
     background-color: #17252A;
     font-family: "Open Sans";
     margin-bottom: 3rem;
+    height: 4rem;
+    width: 100%;
+    transition: height 200ms ease;
+}
+
+.navbar:hover {
+    height: 10rem;
 }
 
 .navbar-nav {
-    display: flex;
-    text-decoration: none;
     list-style: none;
-    float: right;
-    padding-right: 3rem;
-    margin: 0%;
-}
-
-.navbar-nav :hover {
-    height: 6rem;
+    display: flex;
+    margin: 0;
+    padding-left: 0%;
+    padding-top: 0.5rem;
+    float: left;
 }
 
 .nav-link {
     display: flex;
     color: white;
+    text-decoration: none;
 }
 
 .navbar-nav li{
